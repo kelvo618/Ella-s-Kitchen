@@ -8,7 +8,7 @@ Open `index.html` in Chrome (needs internet once for the Three.js CDN), or use G
 ## Deploy on GitHub Pages
 1. Create a repository and upload `index.html`, `style.css`, `game.js`, `README.md`.
 2. Settings > Pages > Source: "Deploy from a branch", branch `main`, folder `/ (root)`. Save.
-3. Open `https://<your-name>.github.io/<repo>/` after a minute.
+3. Open https://kelvo618.github.io/Ella-s-Kitchen/
 
 ## Controls
 - Desktop: WASD move, mouse look (click the game first), E or left click to act, Esc pause.
