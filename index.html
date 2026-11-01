@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Master Chef 3D</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="c"></canvas>
+
+<div id="hud" class="hide">
+  <div id="top"><span id="money">₦0</span><span id="lvl">Lv 1</span><div id="xpbar"><i id="xp"></i></div><span id="timer"></span><button id="pauseBtn" aria-label="Pause">❚❚</button></div>
+  <div id="task"></div>
+  <div id="prompt"></div>
+  <div id="prog"><i id="progf"></i></div>
+  <div id="toast"></div>
+  <div id="joy"><i id="knob"></i></div>
+  <button id="act">ACT</button>
+</div>
+
+<div id="menu" class="panel">
+  <h1>MASTER CHEF 3D</h1>
+  <button data-mode="free">Free cooking</button>
+  <button data-mode="career">Career</button>
+  <button data-mode="challenge">Challenge (60s)</button>
+  <button id="bookBtn">Recipe book</button>
+  <button id="setBtn">Settings</button>
+  <p class="small">WASD move · mouse look (click the game) · E or click to act · Esc pause<br>Phone: left stick moves, drag right side to look, ACT button to cook</p>
+</div>
+
+<div id="picker" class="panel hide"><h2>Choose a recipe</h2><div id="pickList"></div><button data-back>Back</button></div>
+<div id="book" class="panel hide"><h2>Recipe book</h2><div id="bookList"></div><button data-back>Back</button></div>
+<div id="settings" class="panel hide"><h2>Settings</h2>
+  <label>Look sensitivity <input id="sens" type="range" min="1" max="10" value="5"></label>
+  <label><input id="shadows" type="checkbox" checked> Shadows (turn off on slow phones)</label>
+  <button data-back>Back</button></div>
+<div id="pause" class="panel hide"><h2>Paused</h2>
+  <button id="resume">Resume</button><button id="restart">Restart</button><button id="quit">Main menu</button></div>
+<div id="end" class="panel hide"><h2 id="endT"></h2><p id="endP"></p><button id="endBtn">Main menu</button></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="game.js"></script>
+</body>
+</html>

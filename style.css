@@ -1,0 +1,29 @@
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;user-select:none}
+html,body{margin:0;height:100%;overflow:hidden;background:#1b1210;font-family:'Trebuchet MS',system-ui,sans-serif;color:#fff;touch-action:none}
+#c{position:fixed;inset:0;width:100%;height:100%;display:block}
+.hide{display:none!important}
+.panel{position:fixed;inset:0;background:radial-gradient(#3a2418ee,#120b09f2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:20px;text-align:center;z-index:10;overflow:auto}
+h1{font-size:clamp(32px,8vw,56px);margin:0 0 8px;color:#ffd45e;letter-spacing:2px;text-shadow:0 4px 0 #8a2018}
+h2{margin:0;color:#ffd45e}
+button{font:inherit;font-weight:700;color:#fff;background:#e8483b;border:0;border-radius:14px;padding:12px 28px;min-width:230px;font-size:18px;box-shadow:0 5px 0 #8a2018;cursor:pointer}
+button:active{transform:translateY(3px);box-shadow:0 2px 0 #8a2018}
+.small{max-width:380px;font-size:13px;opacity:.75;line-height:1.5}
+#pickList,#bookList{display:flex;flex-direction:column;gap:8px;max-width:420px;width:100%}
+#bookList div{background:#fff1;border-radius:12px;padding:10px;text-align:left;font-size:14px}
+label{display:flex;gap:8px;align-items:center}
+#hud{position:fixed;inset:0;pointer-events:none;z-index:5}
+#hud button,#joy{pointer-events:auto}
+#top{display:flex;gap:12px;align-items:center;padding:calc(8px + env(safe-area-inset-top,0px)) 12px 8px;background:#000a;font-weight:700}
+#xpbar{flex:1;height:8px;background:#fff3;border-radius:4px;overflow:hidden}#xp{display:block;height:100%;width:0;background:#ffd45e}
+#pauseBtn{min-width:0;padding:6px 12px;font-size:14px}
+#task{margin:8px auto;width:max-content;max-width:92%;background:#000a;padding:8px 14px;border-radius:12px;font-size:15px;text-align:center}
+#prompt{position:absolute;left:50%;top:58%;transform:translateX(-50%);background:#ffd45e;color:#3b1f3a;font-weight:700;padding:8px 16px;border-radius:20px;white-space:nowrap}
+#prompt:empty{display:none}
+#prog{position:absolute;left:50%;top:66%;width:min(60%,260px);height:12px;transform:translateX(-50%);background:#0008;border-radius:6px;overflow:hidden;border:2px solid #fff}
+#progf{display:block;height:100%;width:0;background:#58c24a}
+#toast{position:absolute;left:50%;top:30%;transform:translateX(-50%);font-size:26px;font-weight:700;text-shadow:0 3px 0 #000;opacity:0;transition:opacity .3s;white-space:nowrap}
+#toast.on{opacity:1}
+#joy,#act{display:none}
+.touch #joy{display:block;position:absolute;left:24px;bottom:calc(30px + env(safe-area-inset-bottom,0px));width:130px;height:130px;border-radius:50%;background:#fff2;border:3px solid #fff5}
+#knob{position:absolute;left:35px;top:35px;width:60px;height:60px;border-radius:50%;background:#fffb}
+.touch #act{display:block;position:absolute;right:24px;bottom:calc(40px + env(safe-area-inset-bottom,0px));width:96px;height:96px;min-width:0;border-radius:50%;padding:0;pointer-events:auto}
